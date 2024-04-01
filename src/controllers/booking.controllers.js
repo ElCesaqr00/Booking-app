@@ -1,6 +1,9 @@
 const catchError = require('../utils/catchError');
 const Booking = require('../models/Booking');
-const User = require("../models/Users")
+const User = require("../models/Users");
+const Image = require("../models/Images");
+const Hotel = require("../models/Hotel");
+const City = require("../models/City")
 
 const getAll = catchError(async(req, res) => {
     const userId = req.user.id;
@@ -8,8 +11,12 @@ const getAll = catchError(async(req, res) => {
         include : [ {
             model: User,
             attributes: { exclude: ["password"]}
+        }, {
+            model: Hotel,
+            include: [ Image, City]
         }],
-         where: { userId : userId
+         where: {
+             userId : userId
         }
     });
     return res.json(results);
