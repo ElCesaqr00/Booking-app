@@ -11,7 +11,7 @@ const main = async() => {
             lastName: "MontesPrueba",
             email: "matiasPrueba@gmail.com",
             password: "123456",
-            gender: "MALE"
+            gender: "Male"
         }
         await request(app).post("/users").send(user);
         

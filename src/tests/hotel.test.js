@@ -27,10 +27,10 @@ test('Endpoint /Post debe crear un usuario para el sistema ', async () => {
     "name": "hotel prueba",
     "description": "cuidado 100% test",
     "price": "1",
-    "adress": "socorro",
+    "address": "socorro",
     "lat": 3.4616668,
     "lon": -76.532028,
-    "cityId": 1
+    "cityId": 3
   };
   const res = await request(app).post('/hotels').send(body).set("Authorization", `Bearer ${token}`);
     id = res.body.id;

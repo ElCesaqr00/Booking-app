@@ -14,7 +14,7 @@ const Hotel = sequelize.define('hotel', {
         type: DataTypes.INTEGER,
         allowNull: false
     },
-    adress: {
+    address: {
         type: DataTypes.STRING,
         allowNull: false
     },

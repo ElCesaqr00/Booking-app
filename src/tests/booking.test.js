@@ -26,7 +26,7 @@ test('Endpoint /Post debe crear una reserva para el sistema ', async () => {
   const body = {
     "checkIn": "2024-05-03",
     "checkOut": "2024-05-04",
-    "hotelId": 1
+    "hotelId": 5
   };
   const res = await request(app).post('/bookings').send(body).set("Authorization", `Bearer ${token}`);
     id = res.body.id;

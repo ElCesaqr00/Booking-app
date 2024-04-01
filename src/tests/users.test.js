@@ -26,7 +26,7 @@ test('Endpoint /Post debe crear un usuario para el sistema ', async () => {
       lastName: "MontesPrueba",
       email: "CesarPrueba@gmail.com",
       password: "123456",
-      gender: "MALE"
+      gender: "Male"
   };
   const res = await request(app).post('/users').send(body).set("Authorization", `Bearer ${token}`);
     id = res.body.id;
